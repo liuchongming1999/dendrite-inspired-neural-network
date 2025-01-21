@@ -1,0 +1,195 @@
+load_file("nrngui.hoc")
+
+load_file("nrngui.hoc")
+
+
+strdef tstr
+objref vbox, hbox, hbox2
+
+vbox = new VBox()
+vbox.intercept(1)
+
+    xpanel("Sheasby and Fohlmeister 1999 simulations")
+    xlabel("Models of Cells from Sheasby and Fohlmeister 1999")
+    xlabel("select below cells for current clamp simulations similar")
+    xlabel("to those in the left column of figure 3.")
+    xpanel()
+    xpanel("selections of cells")
+    
+    hbox=new HBox()
+    hbox.intercept(1)
+        xlabel("Large")
+        xradiobutton("ctt3219f", "restart(\"Large/CTT3219F/ctt3219f\")")
+        xradiobutton("lws9287q", "restart(\"Large/LWS9287A/lws9287a\")")
+        xradiobutton("lws9287q", "restart(\"Large/LWS9287Q/lws9287q\")")
+        xradiobutton("lws9287r", "restart(\"Large/LWS9287R/lws9287r\")")
+        
+        xlabel("Medium Complex")
+        xradiobutton("ctt1209a", "restart(\"MediumComplex/CTT1209A/ctt1209a\")")
+        xradiobutton("ctt3219b", "restart(\"MediumComplex/CTT3219B/ctt3219b\")")
+        xradiobutton("ctt3219g", "restart(\"MediumComplex/CTT3219G/ctt3219g\")")
+        xradiobutton("ctt3219j", "restart(\"MediumComplex/CTT3219J/ctt3219j\")")
+        xradiobutton("ctt3219n", "restart(\"MediumComplex/CTT3219N/ctt3219n\")")
+        xradiobutton("ctty238f", "restart(\"MediumComplex/CTTY238F/ctty238f\")")
+        xradiobutton("frsx097c", "restart(\"MediumComplex/FRSX097C/frsx097c\")")
+        xradiobutton("frsx097f", "restart(\"MediumComplex/FRSX097F/frsx097f\")")
+        xradiobutton("lws9287d", "restart(\"MediumComplex/LWS9287D/lws9287d\")")
+        xradiobutton("lws9287f", "restart(\"MediumComplex/LWS9287F/lws9287f\")")
+        xradiobutton("lws9287g", "restart(\"MediumComplex/LWS9287G/lws9287g\")")
+        xradiobutton("lws9287h", "restart(\"MediumComplex/LWS9287H/lws9287h\")")
+        xradiobutton("lws9287l", "restart(\"MediumComplex/LWS9287L/lws9287l\")")
+        xradiobutton("lws9287m", "restart(\"MediumComplex/LWS9287M/lws9287m\")")
+        xradiobutton("lws9287p", "restart(\"MediumComplex/LWS9287P/lws9287p\")")
+        xradiobutton("lws9287s", "restart(\"MediumComplex/LWS9287S/lws9287s\")")
+        xradiobutton("lws9287w", "restart(\"MediumComplex/LWS9287W/lws9287w\")")
+        xradiobutton("lws9287y", "restart(\"MediumComplex/LWS9287Y/lws9287y\")")
+        
+        xpanel()
+        xpanel("Medium Simple")
+        xlabel("Medium Simple")
+        xradiobutton("ctt3219c", "restart(\"MediumSimple/CTT3219C/ctt3219c\")")
+        xradiobutton("ctt3219k", "restart(\"MediumSimple/CTT3219K/ctt3219k\")")
+        xradiobutton("ctt3219m", "restart(\"MediumSimple/CTT3219M/ctt3219m\")")
+        xradiobutton("ctt3219z", "restart(\"MediumSimple/CTT3219Z/ctt3219z\")")
+        xradiobutton("ctty238f", "restart(\"MediumSimple/CTTY238F/ctty238f\")")
+        xradiobutton("ctty118f", "restart(\"MediumSimple/CTTY118F/ctty118f\")")
+        xradiobutton("lws9287b", "restart(\"MediumSimple/LWS9287B/lws9287b\")")
+        xradiobutton("lws9287i", "restart(\"MediumSimple/LWS9287I/lws9287i\")")
+        xradiobutton("lws9287j", "restart(\"MediumSimple/LWS9287J/lws9287j\")")
+        xradiobutton("lws9287k", "restart(\"MediumSimple/LWS9287K/lws9287k\")")
+        xradiobutton("lws9287n", "restart(\"MediumSimple/LWS9287N/lws9287n\")")
+        xradiobutton("lws9287o", "restart(\"MediumSimple/LWS9287O/lws9287o\")")
+        xradiobutton("lws9287u", "restart(\"MediumSimple/LWS9287U/lws9287u\")")
+        xradiobutton("lws9287v", "restart(\"MediumSimple/LWS9287V/lws9287v\")")
+        xradiobutton("lws9287x", "restart(\"MediumSimple/LWS9287X/lws9287x\")")
+        xlabel("Small Complex")
+        xradiobutton("cts7259g", "restart(\"SmallComplex/CTS7259G/cts7259g\")")
+        xradiobutton("ctt3219h", "restart(\"SmallComplex/CTT3219H/ctt3219h\")")
+        xradiobutton("ctty118a", "restart(\"SmallComplex/CTTY118A/ctty118a\")")
+        xradiobutton("ctty118c", "restart(\"SmallComplex/CTTY118C/ctty118c\")")
+        xradiobutton("ctty118e", "restart(\"SmallComplex/CTTY118E/ctty118e\")")
+        xradiobutton("ctty238d", "restart(\"SmallComplex/CTTY238D/ctty238d\")")
+        xradiobutton("ctty238g", "restart(\"SmallComplex/CTTY238G/ctty238g\")")
+        xradiobutton("frsx097e", "restart(\"SmallComplex/FRSX097E/frsx097e\")")
+        
+        xpanel()
+        xpanel("Small Simple")
+        
+        xlabel("Small Simple")
+        xradiobutton("ctt1209b", "restart(\"SmallSimple/CTT1209B/ctt1209b\")")
+        xradiobutton("ctt1209c", "restart(\"SmallSimple/CTT1209C/ctt1209c\")")
+        xradiobutton("ctt1209d", "restart(\"SmallSimple/CTT1209D/ctt1209d\")")
+        xradiobutton("ctt1209e", "restart(\"SmallSimple/CTT1209E/ctt1209e\")")
+        xradiobutton("ctt1209f", "restart(\"SmallSimple/CTT1209F/ctt1209f\")")
+        xradiobutton("ctt1209g", "restart(\"SmallSimple/CTT1209G/ctt1209g\")")
+        xradiobutton("ctt1209h", "restart(\"SmallSimple/CTT1209H/ctt1209h\")")
+        xradiobutton("ctt2249a", "restart(\"SmallSimple/CTT2249A/ctt2249a\")")
+        xradiobutton("ctt2249c", "restart(\"SmallSimple/CTT2249C/ctt2249c\")")
+        xradiobutton("ctt7259b", "restart(\"SmallSimple/CTT7259B/ctt7259b\")")
+        xradiobutton("ctty118b", "restart(\"SmallSimple/CTTY118B/ctty118b\")")
+        xradiobutton("ctty118d", "restart(\"SmallSimple/CTTY118D/ctty118d\")")
+        xradiobutton("ctty238d", "restart(\"SmallSimple/CTTY238D/ctty238d\")")
+        xradiobutton("ctty238a", "restart(\"SmallSimple/CTTY238A/ctty238a\")",1)  // mark button on
+        
+        xpanel()
+    hbox.intercept(0)
+    hbox.map()
+
+
+
+    hbox2 = new HBox()
+    hbox2.intercept(1)
+    xpanel("figure6")
+	xlabel("Select a Medium Complex cell then press")
+	xpanel()
+	xpanel("thebutton")
+        xbutton("Figure 6","fig6()")
+	xpanel()
+	xpanel("more info")
+	xlabel("(narrow diam can be changed)")
+	xpanel()
+    hbox2.intercept(0)
+    hbox2.map()
+	
+
+    xpanel("figure10BC")
+    xbutton("Figure 10 B,C","fig10bc()")
+    xpanel()
+
+vbox.intercept(0)
+vbox.map()
+
+pwmcnt = PWManager[0].count // the initial guis should not be dismissed
+
+proc delete_graphs() {
+
+	objref graphItem, save_window_
+	for i=0, n_graph_lists-1 {
+		graphList[i].remove_all()
+	}
+	flush_list.remove_all()
+	fast_flush_list.remove_all()
+	doNotify()
+	for (i= PWManager[0].count-1; i >= pwmcnt; i -= 1) {
+		PWManager[0].close(i)
+		doNotify()
+	}
+}
+
+proc delete_cells() {
+	forall delete_section()	// this removes the previous cell if there is one
+}
+
+proc restart() {local i
+
+	delete_graphs()	
+	delete_cells()
+
+	stoprun = 0
+	dt = .025
+
+	tstop = 150
+	print "loading: ",$s1    
+	sprint(tstr, "%s.asc", $s1)
+	load_file(1, tstr)
+	sprint(tstr, "%s.hoc", $s1)
+	load_file(1, tstr)
+	load_file(1,"first.ses")
+	init()
+	run()
+}
+
+
+						// the last cell in the list...
+proc fig6() {
+	delete_graphs()
+	load_file("anti.ses")
+	move_iclamp2axon()
+
+	xpanel("fig6")
+	xlabel("selecting MediumComplex cell ctty238f shows interesting")
+	xlabel("behavior around the narrow region diameter = 0.45")
+	xvalue("narrow region diam","narrowr.diam")
+	xpanel()
+
+	dt=.1
+	tstop=30
+
+	init()
+	run()
+}
+
+proc fig10bc() {
+	delete_graphs()
+	delete_cells()
+	load_file("MediumComplex/CTT1209A/ctt1209a.asc")
+	load_file("ctt1209a_denstim.hoc")
+	load_file("soma_dend_v.ses")
+	init()
+	run()
+}
+
+
+
+restart("SmallSimple/CTT1209B/ctt1209b")	// this automatically starts the simulation with
+
